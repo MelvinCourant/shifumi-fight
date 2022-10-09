@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shifumi</title>
+    <link rel="stylesheet" href="Shifumi.css">
+    <link rel="icon" href="img/icon.ico">
+</head>
+<body>
+    <header>
+        <div id="banniere">
+            <p>Shifumi fight</p>
+        </div>
+
+        <nav id="menu">
+            <div id="blocker">
+
+            </div>
+            <a id="jouer">Nouvelle partie</a>
+            <a id="regles">Règles</a>
+            <a id="connexion">Se Connecter</a>
+            <a id="profil"></a>
+        </nav>
+    </header>
+
+    <main id="game-body">
+        <div id="game">
+            <div id="score">
+                <p><span id="pseudo-joueur"></span>: <span id="score-joueur"></span></p>
+                <p>Ordi: <span id="score-ordi"></span></p>
+            </div>
+
+            <div id="avatars">
+                <span id="avatar-joueur"></span>
+                <span id="avatar-ordi"></span>
+            </div>
+
+            <div id="cote-joueur">
+                <img src="">
+            </div>
+
+            <div id="compte-rebours">
+                <p></p>
+            </div>
+
+            <div id="cote-ordi">
+                <img src="">
+            </div>
+        </div>
+
+        <div id="choix">
+            <div id="choix-box1">
+                <input type="button" id="rejouer" value="REJOUER">
+            </div>
+            <div id="choix-box2">
+                <button id="pierre"><img src="img/Pierre.png" alt="Pierre.png">Pierre</button>
+                <button id="feuille"><img src="img/Feuille.png" alt="Feuille.png">Feuille</button>
+                <button id="ciseaux"><img src="img/Ciseaux.png" alt="Ciseaux.png">Ciseaux</button>
+            </div>
+        </div>
+
+        <div id="textes-regles">
+            <h1>Règles</h1>
+            <div id="regles-description">
+                <h2>Dans ce jeu, vous affrontez un ordinateur au Shifumi (ou Pierre Feuille Ciseaux en français). Voici les règles:</h2>
+                <p>- Un compte à rebours de 3s se lance où vous avez la possibilité de choisir entre pierre feuille ciseaux. Il suffit de cliquer sur le choix que vous souhaitez pendant ce laps de temps pour faire votre choix.</p>
+                <p>- Si vous n'avez pas choisi, le jeu va choisir aléatoirement pour vous.</p>
+                <p>- Pierre > Ciseaux > Feuille > Pierre.</p>
+                <p>- Le premier à 3 points a gagné la partie.</p>
+                <p><br>Si vous vous êtes connecté, vous pouvez accéder à votre profil où vous pourrez voir vos 3 dernières parties. Bon jeu !</p>
+            </div>
+        </div>
+
+        <div id="formulaire-connexion">
+            <h1>Connexion</h1>
+            <label for="pseudo-form">Pseudo</label>
+            <input type="text" id="pseudo-form" placeholder="Votre pseudo">
+            <p>Votre avatar:</p>
+            <div id="choix-avatar">
+                <button>
+                    <img src="img/fighter1.png" id="1" onclick="avatarSelect(this.id);">
+                </button>
+                <button>
+                    <img src="img/fighter2.png" id="2" onclick="avatarSelect(this.id);">
+                </button>
+                <button>
+                    <img src="img/fighter3.png" id="3" onclick="avatarSelect(this.id);">
+                </button>
+                <button>
+                    <img src="img/fighter4.png" id="4" onclick="avatarSelect(this.id);">
+                </button>
+                <button>
+                    <img src="img/fighter5.png" id="5" onclick="avatarSelect(this.id);">
+                </button>
+                <button>
+                    <img src="img/fighter6.png" id="6" onclick="avatarSelect(this.id);">
+                </button>
+                <button>
+                    <img src="img/fighter7.png" id="7" onclick="avatarSelect(this.id);">
+                </button>
+                <button>
+                    <img src="img/fighter8.png" id="8" onclick="avatarSelect(this.id);">
+                </button>
+                <button>
+                    <img src="img/fighter9.png" id="9" onclick="avatarSelect(this.id);">
+                </button>
+                <button>
+                    <img src="img/fighter10.png" id="10" onclick="avatarSelect(this.id);">
+                </button>
+                <button>
+                    <img src="img/fighter11.png" id="11" onclick="avatarSelect(this.id);">
+                </button>
+                <button>
+                    <img src="img/fighter12.png" id="12" onclick="avatarSelect(this.id);">
+                </button>
+                <button>
+                    <img src="img/fighter13.png" id="13" onclick="avatarSelect(this.id);">
+                </button>
+                <button>
+                    <img src="img/fighter14.png" id="14" onclick="avatarSelect(this.id);">
+                </button>
+                <button>
+                    <img src="img/fighter15.png" id="15" onclick="avatarSelect(this.id);">
+                </button>
+                <button>
+                    <img src="img/fighter16.png" id="16" onclick="avatarSelect(this.id);">
+                </button>
+            </div>
+            <button id="valider">VALIDER</button>
+        </div>
+
+        <div id="box-profil">
+            <h1 id="h1-pseudo"></h1>
+            <span id="avatar-joueur2"></span>
+            <p>Derniers scores:</p>
+            <ul>
+                <li id="score-1"></li>
+                <li id="score-2"></li>
+                <li id="score-3"></li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>Réalisé par Melvin COURANT - Credits: @vectorpocket pour le ring, @macrovector pour la pierre la feuille les ciseaux et les avatars, @pch.vector pour les mains et @starline pour le fond</p>
+    </footer>
+    <script src="Shifumi.js"></script>
+</body>
+</html>

@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+p, a{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header, #menu, #game-body, footer{
+    text-align: center;
+    width: 100%;
+}
+
+body{
+    background: url("img/fond_banniere_v2.svg") no-repeat center/180%;
+}
+
+#banniere{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 6.52vh;
+}
+
+#banniere p{
+    font-family: 'Luckiest Guy', sans-serif;
+    font-size: 5.34vh;
+    color: white;
+}
+
+#menu{
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    height: 2.03vh;
+    z-index: 9998;
+}
+
+#blocker{
+    display: none;
+    z-index: 9999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#menu a {
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.6vh;
+    color: white;
+}
+
+#profil{
+    display: none;
+}
+
+#game-body{
+    height: 89.42vh;
+    position: relative;
+    background: url("img/background.svg") no-repeat center/ auto 120%;
+}
+
+#score{
+    display: none;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#score p{
+    color: red;
+    margin: 10px 15px;
+}
+
+#avatars{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 2%;
+    left: 0;
+    width: 100%;
+    padding: 1%;
+}
+
+#avatars span{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    border: #914949 solid 5px;
+    overflow: hidden;
+    background: indianred no-repeat center/ auto 100%;
+}
+
+#avatar-ordi{
+    transform: scaleX(-1);
+}
+
+#game{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+#cote-joueur, #cote-ordi{
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+}
+
+#compte-rebours{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20.83vw;
+    height: auto;
+}
+
+#compte-rebours p{
+    width: 100%;
+    font-family: 'Luckiest Guy', sans-serif;
+    color: #ed0131;
+    font-size: 7vh;
+    text-align: center;
+}
+
+#cote-ordi img{
+    transform: scaleX(-1);
+}
+
+#choix{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 2%;
+    width: 100%;
+}
+
+#rejouer{
+    display: none;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    background-color: seagreen;
+    border: 3px solid #28683a;
+    height: 7vh;
+    width: 15vh;
+    border-radius: 20px;
+}
+
+#rejouer:hover{
+    background-color: #28683a;
+}
+
+.visible{
+    display: block !important;
+}
+
+.visible-flex{
+    display: flex !important;
+}
+
+#choix-box2{
+    margin-top: 20px;
+}
+
+#choix button{
+    cursor: pointer;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 3px solid #914949;
+    background-color: indianred;
+    box-shadow: 0 0 10px grey;
+    border-radius: 100px;
+    height: 18.16vh;
+    width: 18.16vh;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3.21vh;
+}
+
+#choix button:active{
+    background-color: #914949;
+}
+
+#choix img{
+    height: 9.38vh;
+}
+
+#regles:hover #textes-regles{
+    display: block !important;
+}
+
+#textes-regles{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: indianred;
+    color: white;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+}
+
+#regles-description{
+    margin-top: 20px;
+    text-align: left;
+}
+
+#regles-description h2{
+    margin-bottom: 10px;
+}
+
+#regles-description p{
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+#formulaire-connexion{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: rgba(205, 92, 92, 0.9);
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+}
+
+#formulaire-connexion label{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+}
+
+#formulaire-connexion input{
+    border-radius: 20px;
+    border: 3px solid #914949;
+    color: indianred;
+    background-color: white;
+    text-align: center;
+    outline: none;
+    height: 40px;
+    width: 250px;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#formulaire-connexion input::placeholder{
+    color: indianred;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+#formulaire-connexion p, #box-profil p{
+    margin-top: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 24px;
+}
+
+#choix-avatar{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 10px;
+    margin-top: 30px;
+}
+
+#choix-avatar button{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    border: none;
+    background: none;
+}
+
+#choix-avatar img{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: seagreen;
+    cursor: pointer;
+}
+
+#choix-avatar img:hover{
+    opacity: 0.2;
+}
+
+.avatarChoisi{
+    border: 8px solid red;
+}
+
+#valider{
+    margin-top: 30px;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    background-color: seagreen;
+    border: 3px solid #28683a;
+    height: 7vh;
+    width: 15vh;
+    border-radius: 20px;
+}
+
+#valider:hover{
+    background-color: #28683a;
+}
+
+#box-profil{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: rgba(205, 92, 92, 0.9);
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+}
+
+#avatar-joueur2{
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 40px;
+    border: #914949 solid 5px;
+    overflow: hidden;
+    background: indianred no-repeat center/ auto 100%;
+}
+
+#box-profil li{
+    margin-top: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 21px;
+}
+
+footer{
+    height: 2.03vh;
+}
+
+footer p{
+    font-size: 1.5vh;
+    color: white;
+}
